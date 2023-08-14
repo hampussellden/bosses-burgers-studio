@@ -22,16 +22,25 @@ export default defineConfig({
           .title("Bosses Burgers")
           .items([
             S.listItem()
-              .title("Settings")
-              .id("settings")
+              .title("Landing Page")
+              .id("landingPage")
               .icon(CogIcon)
               .child(
                 S.document()
-                  .schemaType("siteSettings")
-                  .documentId("siteSettings")
+                  .schemaType("landingPage")
+                  .documentId("landingPage")
               ),
-              S.divider(),
-              ...S.documentTypeListItems().filter(item => !['siteSettings'].includes(item.getId()))
+            S.listItem()
+              .title("Menu")
+              .id("menu")
+              .icon(CogIcon)
+              .child(
+                S.document()
+                  .schemaType("menu")
+                  .documentId("menu")
+              ),
+            S.divider(),
+              ...S.documentTypeListItems().filter(item => !['landingPage','landingPageInfoBlock','menu','subtitle'].includes(item.getId()))
           ])
     }
   ), visionTool()],

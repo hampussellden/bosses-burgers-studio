@@ -1,7 +1,7 @@
-// schemas/siteSettings.js
+// schemas/landingPage.js
 export default {
-    name: 'siteSettings',
-    title: 'Site Settings',
+    name: 'landingPage',
+    title: 'Landing Page',
     type: 'document',
     fields: [
       {
